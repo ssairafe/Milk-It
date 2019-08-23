@@ -22,13 +22,14 @@ class ProductList extends React.Component {
         products: result
       });
     });
-
   }
 
-  render(props) {
+  render() {
     const renderingItems = this.state.products.map(item => {
       return (
-        <div style={{ 'width': '15rem' }} className="col-md-3" key={item.id}>
+        <div style={{ 'width': '15rem' }} onClick={() => {
+          this.props.view('details', { item: item.id });
+        }} className="col-md-3" key={item.id}>
           <ProductItem image={item.image} name={item.name} />
         </div>
       );
