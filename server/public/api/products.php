@@ -1,18 +1,12 @@
 <?php
-// require_once 'functions.php';
-// header('Content-Type: application/json');
-
-// set_exception_handler('errorHandler');
 
 
-// $output = file_get_contents('dummy-products-list.json');
-// print($output);
+require_once ('db_connection.php');
 
-if (empty($_GET['id'])) {
-  readfile('dummy-products-list.json');
-} else {
-  readfile('dummy-product-details.json');
-}
+ if(!$conn){
+   die("Error:". mysqli_connect_error());
+ }
+
 
 
 
