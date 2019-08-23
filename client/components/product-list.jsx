@@ -22,7 +22,6 @@ class ProductList extends React.Component {
         products: result
       });
     });
-
   }
 
   render() {

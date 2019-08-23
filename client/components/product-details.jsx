@@ -10,17 +10,7 @@ class ProductDetails extends React.Component {
 
   componentDidMount() {
     this.getId(this.state.product);
-
-    // this.getFixedCost();
   }
-
-  // getFixedCost() {
-  //   let product = this.state.product;
-  //   product.price = product.price.toFixed(2);
-  //   this.setState({
-  //     product: product
-  //   });
-  // }
 
   getId(id) {
     fetch('/api/products.php?id=' + id).then(response => response.json())
@@ -28,8 +18,7 @@ class ProductDetails extends React.Component {
         response.price = response.price / 100;
         this.setState({
           product: response
-        })
-        ;
+        });
       });
   }
 
