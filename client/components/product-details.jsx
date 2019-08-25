@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Header from './header';
 class ProductDetails extends React.Component {
   constructor(props) {
     super(props);
@@ -9,13 +9,12 @@ class ProductDetails extends React.Component {
   }
 
   componentDidMount() {
-    this.getId(this.state.product);
+    this.getProduct();
   }
 
-  getId(id) {
-    fetch('/api/products.php?id=' + id).then(response => response.json())
+  getProduct() {
+    fetch('/api/products.php?id=' + this.props.id).then(response => response.json())
       .then(response => {
-        response.price = response.price / 100;
         this.setState({
           product: response
         });
@@ -28,21 +27,28 @@ class ProductDetails extends React.Component {
       return <div></div>;
     }
     return (
-      <div className="container">
+      <div className="container-fluid">
+        <Header />
+        <a onClick={() => {
+          this.props.view('catalog', { id: this.state.product });
+        }} href="#" className="btn btn-primary mb-4">&#60;- Back to Catalog</a>
         <div className="row">
-          <img style={{ 'width': '20rem' }} image={this.state.product.image} src={this.state.product.image}/>
+          <div className="col-md-3"></div>
+          <div className="col-md-3">
+            <img style={{ 'width': '20rem' }} image={this.state.product.image} src={this.state.product.image}/>
+          </div>
           <div className="col-md-3">
             <h1>{this.state.product.name}</h1>
-            <h2>{this.state.product.price}</h2>
-            {this.state.product.shortDescription}
+
+            <h2>{'$' + (this.state.product.price / 100).toFixed(2)}</h2>
+            {this.state.product.description}
           </div>
         </div>
         <div style={{ 'height': '2rem' }} className="row"></div>
-        <div className="row">{this.state.product.longDescription}</div>
+        <div className="container">
+          <div className="row">{this.state.product.longDescription}</div>
+        </div>
         <div style={{ 'height': '1rem' }} className="row"></div>
-        <a onClick={() => {
-          this.props.view('catalog', { item: this.state.product });
-        }} href="#" className="btn btn-primary">Back to Catalog</a>
       </div>
 
     );
