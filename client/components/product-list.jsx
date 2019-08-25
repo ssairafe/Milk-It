@@ -28,9 +28,9 @@ class ProductList extends React.Component {
     const renderingItems = this.state.products.map(item => {
       return (
         <div style={{ 'width': '15rem' }} onClick={() => {
-          this.props.view('details', { item: item.id });
-        }} className="col-md-3" key={item.id}>
-          <ProductItem image={item.image} name={item.name} />
+          this.props.view('details', { id: item.ID });
+        }} className="col-md-3" key={item.ID}>
+          <ProductItem image={item.image} name={item.name} id={item.ID} />
         </div>
       );
     });
