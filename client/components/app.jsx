@@ -58,7 +58,12 @@ export default class App extends React.Component {
 
   render() {
     if (this.state.view.name === 'details') {
-      return <ProductDetails view={this.setView} id={this.state.view.params.id} add={this.addToCart}/>;
+      return (
+        <div className="container-fluid">
+          <Header items={this.state.cart.length}/>
+          <ProductDetails view={this.setView} id={this.state.view.params.id} add={this.addToCart}/>
+        </div>
+      );
     } else if (this.state.view.name === 'catalog') {
       return (
         <div className="container-fluid">
