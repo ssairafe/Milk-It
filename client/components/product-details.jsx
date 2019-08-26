@@ -48,7 +48,11 @@ class ProductDetails extends React.Component {
         <div className="container">
           <div className="row">{this.state.product.longDescription}</div>
         </div>
-        <div style={{ 'height': '1rem' }} className="row"></div>
+        <div style={{ 'height': '1rem' }} className="row">
+          <a onClick={() => {
+            this.props.add(this.state.product);
+          }} href="#" className="btn btn-primary mb-4">Add to Cart</a>
+        </div>
       </div>
 
     );
