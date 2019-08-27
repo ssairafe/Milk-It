@@ -28,16 +28,16 @@ class ProductList extends React.Component {
     const renderingItems = this.state.products.map(item => {
       return (
         <div style={{ 'width': '15rem' }} onClick={() => {
-          this.props.view('details', { id: item.ID });
-        }} className="col-md-3" key={item.ID}>
-          <ProductItem image={item.image} name={item.name} id={item.ID} />
+          this.props.view('details', { id: item.id });
+        }} className="col-md-3" key={item.id}>
+          <ProductItem image={item.image} name={item.name} id={item.id} />
         </div>
       );
     });
 
     return (
       <div className="container">
-        <div className="row">
+        <div className="row listBackground">
           {renderingItems}
         </div>
       </div>
