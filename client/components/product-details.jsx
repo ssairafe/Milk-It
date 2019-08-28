@@ -29,7 +29,7 @@ class ProductDetails extends React.Component {
       <>
         <a onClick={() => {
           this.props.view('catalog', { id: this.state.product });
-        }} href="#" className="btn btn-primary mb-4">&#60;- Back to Catalog
+        }} href="#" style={{ 'backgroundColor': 'white', 'color': 'blue' }} className="btn btn-primary mb-4">&#60;- Back to Catalog
         </a>
         <div className="row">
           <div className="col-md-3"></div>
@@ -40,7 +40,7 @@ class ProductDetails extends React.Component {
             <h1>{this.state.product.name}</h1>
 
             <h2>{'$' + (this.state.product.price / 100).toFixed(2)}</h2>
-            {this.state.product.description}
+            {this.state.product.shortDescription}
           </div>
           <div className="col-sm-1">
             <button onClick={() => {
