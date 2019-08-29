@@ -38,7 +38,7 @@ function CartSummaryItems(props) {
             </div>
             <div className="row">
               <a onClick={() => {
-                props.view('catalog', {});
+                props.view('checkout', {});
               }} href="#" style={{ 'backgroundColor': 'white', 'color': 'blue', 'float': 'right' }} className="btn btn-primary mb-3">Checkout
               </a>
             </div>
