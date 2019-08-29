@@ -3,6 +3,7 @@ import Header from './header';
 import ProductList from './product-list';
 import ProductDetails from './product-details';
 import CartSummaryItems from './cart-summary-items';
+import CheckoutForm from './checkout';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -18,11 +19,35 @@ export default class App extends React.Component {
     this.setView = this.setView.bind(this);
     this.addToCart = this.addToCart.bind(this);
     this.grandTotal = this.grandTotal.bind(this);
+    this.placeOrder = this.placeOrder.bind(this);
   }
 
   componentDidMount() {
     this.getCartItems();
 
+  }
+
+  placeOrder(buyerInfo) {
+    let orderInfo = {
+      name: buyerInfo.name,
+      creditCard: buyerInfo.creditCard,
+      shippingAddress: buyerInfo.shippingAddress,
+      order: this.state.cart
+    };
+    fetch('/api/orders.php', {
+      method: 'POST',
+      body: JSON.stringify(orderInfo)
+    }).then(response => {
+      return response.json();
+    }).then(response => {
+      this.setState({
+        cart: [],
+        view: {
+          name: 'catalog',
+          params: {}
+        }
+      });
+    });
   }
 
   addToCart(product) {
@@ -91,6 +116,13 @@ export default class App extends React.Component {
         <div className="container-fluid">
           <Header view={this.setView} items={this.state.cart.length} />
           <CartSummaryItems total={this.grandTotal()} view={this.setView} items={this.state.cart} />
+        </div>
+      );
+    } else if (this.state.view.name === 'checkout') {
+      return (
+        <div className="container">
+          <Header view={this.setView} items={this.state.cart.length} />
+          <CheckoutForm placeOrder={this.placeOrder}/>
         </div>
       );
     }
