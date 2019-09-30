@@ -24,7 +24,9 @@ class CheckoutForm extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <>
+      <div className="row" style={{ 'height': '6rem' }}></div>
+      <div className="container" style={{ 'border': '1px solid black', 'backgroundColor': 'silver', 'width': '50%', 'textAlign': 'center' }}>
         <form className="form-group" onSubmit={this.handleSubmit} >
           <div>
             <label htmlFor="">
@@ -53,6 +55,7 @@ class CheckoutForm extends React.Component {
           <button type='submit'>Place Order</button>
         </form>
       </div>
+      </>
     );
   }
 

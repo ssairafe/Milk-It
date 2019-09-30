@@ -1,25 +1,30 @@
 .page-header{
-  color: blue;
+  color: white;
   position: relative;
+  font-family: Lobster, cursive;
+  display: inline-block;
+  margin-left: 5%;
 }
 
 .fa-shopping-cart {
   font-size: 2.5rem;
-  color: blue;
+  color: white;
   position: relative;
-
+  display: inline;
+  left: 75%;
 }
 
 .cartCount{
-  font-size: 1rem;
+  font-size: 1.3rem;
   position: absolute;
-  color: white;
-  bottom: 57%;
-  left: 10%;
+  color: palevioletred;
+  bottom: 37%;
+  left: 50%;
+  display: inline
 }
 
-.blankHead{
-  height: .5rem;
+.head{
+  background-color: blue;
 }
 
 body{

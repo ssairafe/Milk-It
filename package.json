@@ -105,5 +105,6 @@
   "bugs": {
     "url": "https://github.com/Learning-Fuze/wicked-sales/issues"
   },
-  "homepage": "https://github.com/Learning-Fuze/wicked-sales#readme"
+  "homepage": "https://github.com/Learning-Fuze/wicked-sales#readme",
+  "main": "webpack.config.js"
 }
