@@ -29,7 +29,7 @@ class ProductDetails extends React.Component {
       <>
         <a onClick={() => {
           this.props.view('catalog', { id: this.state.product });
-        }} href="#" style={{ 'backgroundColor': 'white', 'color': 'blue' }} className="btn btn-primary mb-4">&#60;- Back to Catalog
+        }} href="#" style={{ marginLeft: '1rem', marginTop: '1rem', 'backgroundColor': 'black', 'color': 'white', border: 'none' }} className="btn btn-primary mb-4">&#60;- Back to Catalog
         </a>
         <div className="row">
           <div className="col-md-3"></div>
@@ -45,7 +45,7 @@ class ProductDetails extends React.Component {
           <div className="col-sm-1">
             <button onClick={() => {
               this.props.add(this.state.product);
-            }} href="#" className="btn btn-primary mb-4">Add to Cart
+            }} href="#" className="btn btn-primary mb-4" style={{ border: 'none', backgroundColor: 'black' }}>Add to Cart
             </button>
           </div>
         </div>

@@ -3,7 +3,7 @@
   position: relative;
   font-family: Lobster, cursive;
   display: inline-block;
-  margin-left: 5%;
+  margin-left: 0%;
 }
 
 .fa-shopping-cart {
@@ -17,21 +17,54 @@
 .cartCount{
   font-size: 1.3rem;
   position: absolute;
-  color: palevioletred;
+  color: black;
   bottom: 37%;
   left: 50%;
   display: inline
 }
 
 .head{
-  background-color: blue;
+  background-color: rgb(31, 29, 29);
 }
 
-body{
-  background-color: rgba(240, 234, 228, 0.979);
-}
 
 
 .wickedCart {
   font-size: 3rem;
+}
+
+.logo {
+  width: 3rem;
+  display: inline-block;
+  position: relative;
+  transform: rotate(270deg);
+  margin-left: 5%;
+  vertical-align: top;
+}
+
+.card-body {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  background-color: transparent;
+  bottom: 35%;
+  left: 20%;
+  cursor: pointer;
+  color: transparent;
+}
+
+.card-body:hover {
+  color: white;
+}
+
+.card-title {
+  display: inline-block;
+  color: inherit;
+}
+
+.card-img-top {
+  cursor: pointer;
+}
+.card-img-top:hover ~ .card-body {
+  color: white;
 }
