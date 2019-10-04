@@ -17,3 +17,9 @@ function startup()
 {
   header("Content-type:application/json");
 }
+
+
+function getBodyData() {
+  $entityBody = file_get_contents('php://input');
+ return json_decode($entityBody, true);
+}

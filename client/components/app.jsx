@@ -23,7 +23,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getCartItems();
+  //  this.getCartItems();
 
   }
 
@@ -52,7 +52,7 @@ export default class App extends React.Component {
   }
 
   addToCart(product) {
-    fetch('/api/cart.php', {
+    fetch('/api/cart.php/' + product.id, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -68,7 +68,10 @@ export default class App extends React.Component {
   }
 
   getCartItems() {
-    fetch('/api/cart.php').then(result => result.json())
+    fetch('/api/cart.php').then(result => {
+      console.log(result);
+      return result.json();
+    })
       .then(result => {
         this.setState({
           cart: result
