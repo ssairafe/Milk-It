@@ -27,19 +27,17 @@ class ProductList extends React.Component {
   render() {
     const renderingItems = this.state.products.map(item => {
       return (
-        <div style={{ 'width': '15rem' }} onClick={() => {
+        <div className="itemHolder" style={{ 'width': '15rem', marginRight: '15%' }} onClick={() => {
           this.props.view('details', { id: item.id });
-        }} className="col-md-3" key={item.id}>
+        }} key={item.id}>
           <ProductItem image={item.image} name={item.name} id={item.id} />
         </div>
       );
     });
 
     return (
-      <div className="container">
-        <div className="row listBackground">
-          {renderingItems}
-        </div>
+      <div className="row listBackground">
+        {renderingItems}
       </div>
     );
   }

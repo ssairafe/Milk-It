@@ -5,6 +5,8 @@ class ProductDetails extends React.Component {
     this.state = {
       product: null
     };
+    this.getCountMinus = this.getCountMinus.bind(this);
+    this.getCountPlus = this.getCountPlus.bind(this);
   }
 
   componentDidMount() {
@@ -20,8 +22,36 @@ class ProductDetails extends React.Component {
       });
   }
 
-  render() {
+  getCountPlus() {
+    let tempProduct = this.state.product;
+    tempProduct.counter = parseInt(tempProduct.counter);
+    tempProduct.counter = tempProduct.counter + 1;
 
+    this.setState({
+      product: tempProduct
+    });
+  }
+
+  getCountMinus() {
+    if (this.state.product.counter < 1) {
+      return null;
+      // let tempProduct = this.state.product;
+      // tempProduct.counter = 0;
+      // this.setState({
+      //   product: tempProduct
+      // });
+    } else {
+      let tempProduct = this.state.product;
+      tempProduct.counter = parseInt(tempProduct.counter);
+      tempProduct.counter = tempProduct.counter - 1;
+
+      this.setState({
+        product: tempProduct
+      });
+    }
+  }
+
+  render() {
     if (!this.state.product) {
       return <div></div>;
     }
@@ -31,33 +61,38 @@ class ProductDetails extends React.Component {
           this.props.view('catalog', { id: this.state.product });
         }} href="#" style={{ marginLeft: '1rem', marginTop: '1rem', 'backgroundColor': 'black', 'color': 'white', border: 'none' }} className="btn btn-primary mb-4">&#60;- Back to Catalog
         </a>
-        <div className="row">
-          <div className="col-md-3"></div>
-          <div className="col-md-3">
+        <div className="container">
+          <div style={{ display: 'inline-block' }}>
             <img style={{ 'width': '20rem' }} image={this.state.product.image} src={this.state.product.image}/>
           </div>
-          <div className="col-md-3 detailsBackground">
+          <div className="detailsBackground" style={{ width: '40%', marginLeft: '10%', display: 'inline-block', verticalAlign: 'bottom' }}>
             <h1>{this.state.product.name}</h1>
-
             <h2>{'$' + (this.state.product.price / 100).toFixed(2)}</h2>
             {this.state.product.shortDescription}
-          </div>
-          <div className="col-sm-1">
-            <button onClick={() => {
-              this.props.add(this.state.product);
-            }} href="#" className="btn btn-primary mb-4" style={{ border: 'none', backgroundColor: 'black' }}>Add to Cart
-            </button>
+            <div>
+              <button onClick={() => {
+                this.props.add(this.state.product);
+              }} href="#" className="btn btn-primary mb-4" style={{ border: 'none', backgroundColor: 'black', marginTop: '5%' }}>Add to Cart
+              </button>
+              <div style={{ position: 'relative', display: 'inline-block', marginLeft: '5%' }}>
+                <div style={{ position: 'relative', display: 'inline-block' }}>
+                  <div onClick={() => { this.getCountPlus(); }} style={{ position: 'relative', display: 'inline-block', transform: 'rotate(180deg)', fontSize: '2rem', top: '30px', cursor: 'pointer' }}>v</div>
+                  <div onClick={() => { this.getCountMinus(); }} style={{ position: 'relative', display: 'block', fontSize: '2rem', cursor: 'pointer' }}>v</div>
+                </div>
+                <div style={{ position: 'relative', display: 'inline-block', left: '20%', fontSize: '2rem' }}>
+                  {this.state.product.counter}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div style={{ 'height': '2rem' }} className="row">
+        <div style={{ 'height': '2rem' }}>
         </div>
         <div className="container-fluid">
           <div className="container">
-            <div className="row">{this.state.product.longDescription}</div>
+            <div className="prodDetails">{this.state.product.longDescription}</div>
           </div>
         </div>
-          <div style={{ 'height': '1rem' }} className="row">
-          </div>
 
       </>
 

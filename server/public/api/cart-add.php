@@ -2,6 +2,7 @@
 $id = null;
 $cartId = null;
 $price = null;
+$count = null;
 
 if(!defined("INTERNAL")){
   throw new Exception('ERROR NO DIRECT ACCESS');
@@ -15,6 +16,7 @@ if(empty($postArray['id'])) {
   throw new Exception('ERROR DATA DOES NOT EXIST');
 } else {
   $id = intval($postArray['id']);
+  $count = intval($postArray['counter']);
     if($id <= 0){
       throw new Exception('ERROR ID IS EMPTY');
     }
@@ -35,9 +37,9 @@ mysqli_query($conn , "START TRANSACTION");
 
 $priceDataResult =mysqli_query($conn, "SELECT `products`.`price` from `products` WHERE `id`={$id}");
 $priceData = mysqli_fetch_assoc($priceDataResult);
-$price = $priceData['price'];
+$price = $priceData['price'] * $count;
 
-$insertQuery = "INSERT INTO `cartItems`(`productID`, `price`, `cartID`, `count`, `added`) VALUES ({$id}, {$price}, {$cartId}, 1, NOW())";
+$insertQuery = "INSERT INTO `cartItems`(`productID`, `price`, `cartID`, `count`, `added`) VALUES ({$id}, {$price}, {$cartId}, {$count}, NOW())";
 $queryInsertResult = mysqli_query($conn,$insertQuery);
 if (mysqli_errno($conn)){
   throw new Exception(mysqli_error($conn));

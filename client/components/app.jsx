@@ -23,7 +23,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-  //  this.getCartItems();
+    this.getCartItems();
 
   }
 
@@ -64,12 +64,11 @@ export default class App extends React.Component {
       this.setState({
         cart: this.state.cart.concat(product)
       });
-    });
+    }).then(() => this.getCartItems());
   }
 
   getCartItems() {
     fetch('/api/cart.php').then(result => {
-      console.log(result);
       return result.json();
     })
       .then(result => {
