@@ -20,11 +20,11 @@ function CartSummaryItems(props) {
     <>
       <a onClick={() => {
         props.view('catalog', {});
-      }} href="#" style={{ 'backgroundColor': 'white', 'color': 'blue' }} className="btn btn-primary mb-3">&#60;- Back to Catalog
+      }} href="#" style={{ 'backgroundColor': 'black', 'color': 'white', border: 'none', marginLeft: '1rem', marginTop: '1rem' }} className="btn btn-primary mb-3">&#60;- Back to Catalog
       </a>
       <div style={{ 'fontFamily': 'Lobster, cursive' }} className="row wickedCart">
         <div className="col"></div>
-        <div className="col">Your Wicked Cart</div>
+        <div className="col">Your Milk</div>
         <div className="col"></div>
       </div>
       <div className="container">
@@ -39,7 +39,7 @@ function CartSummaryItems(props) {
             <div className="row">
               <a onClick={() => {
                 props.view('checkout', {});
-              }} href="#" style={{ 'backgroundColor': 'white', 'color': 'blue', 'float': 'right' }} className="btn btn-primary mb-3">Checkout
+              }} href="#" style={{ 'backgroundColor': 'black', 'color': 'white', 'float': 'right', border: 'none' }} className="btn btn-primary mb-3">Checkout
               </a>
             </div>
           </div>

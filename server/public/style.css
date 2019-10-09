@@ -1,32 +1,232 @@
 .page-header{
-  color: blue;
+  color: white;
   position: relative;
+  font-family: Lobster, cursive;
+  display: inline-block;
+  margin-left: 0%;
 }
+
+.detailsBackground {
+  font-size: 1rem;
+}
+
+.prodDetails {
+font-size: 1.8rem;
+margin-top: 5%;
+margin-bottom: 10%;
+}
+
 
 .fa-shopping-cart {
   font-size: 2.5rem;
-  color: blue;
+  color: white;
   position: relative;
-
+  display: inline-block;
+  left: 70%;
 }
 
 .cartCount{
-  font-size: 1rem;
+  font-size: 1.3rem;
   position: absolute;
-  color: white;
-  bottom: 57%;
-  left: 10%;
+  color: black;
+  bottom: 37%;
+  left: 50%;
+  display: inline
 }
 
-.blankHead{
-  height: .5rem;
+.head{
+  background-color: rgb(31, 29, 29);
+  width: 100vw;
 }
 
-body{
-  background-color: rgba(240, 234, 228, 0.979);
-}
 
 
 .wickedCart {
   font-size: 3rem;
+}
+
+.logo {
+  width: 3rem;
+  display: inline-block;
+  position: relative;
+  transform: rotate(270deg);
+  margin-left: 5%;
+  vertical-align: top;
+}
+
+.card-body {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
+  color: transparent;
+}
+
+.card-body:hover {
+  color: white;
+}
+
+.card-title {
+  display: inline-block;
+  color: inherit;
+  font-family: Lobster, cursive;
+}
+
+.card-img-top {
+  cursor: pointer;
+}
+.card-img-top:hover ~ .card-body {
+  color: white;
+}
+
+#Cow-Milk {
+  height: 14rem !important;
+}
+
+#Lioness-Milk {
+  height: 14rem !important;
+}
+
+.listBackground {
+  margin-left: 10%;
+  margin-bottom: 10%;
+  margin-right: 0px;
+}
+
+.Cow-Milk-title {
+ bottom: 40%;
+  left: 25%;
+}
+
+.Goat-Milk-title {
+ bottom: 25%;
+  left: 30%;
+}
+.Camel-Milk-title {
+ bottom: 40%;
+  left: 25%;
+}
+.Lioness-Milk-title {
+ bottom: 45%;
+  left: 15%;
+}
+.Gorilla-Milk-title {
+ bottom: 35%;
+  left: 20%;
+}
+.Donkey-Milk-title {
+ bottom: 35%;
+  left: 20%;
+}
+
+.mobileCardTitle {
+    display: none;
+  }
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+  .mobileCardTitle {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+  }
+  .listBackground {
+    margin-left: 20%;
+  }
+  .itemHolder {
+    margin-bottom: 20%;
+  }
+  .detailsBackground {
+  font-size: 1.8rem;
+}
+}
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape) {
+  .mobileCardTitle {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+  }
+  .listBackground {
+    margin-left: 20%;
+  }
+  .itemHolder {
+    margin-bottom: 20%;
+  }
+  .detailsBackground {
+  font-size: 1.8rem;
+}
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait)  {
+  .mobileCardTitle {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+  }
+  .listBackground {
+    margin-left: 20%;
+  }
+  .itemHolder {
+    margin-bottom: 20%;
+  }
+  .detailsBackground {
+  font-size: 1.8rem;
+}
+}
+
+
+
+@media only screen
+and (min-device-width : 1024px)
+and (max-device-width : 1366px)
+and (orientation : landscape)  {
+  .mobileCardTitle {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+  }
+  .listBackground {
+    margin-left: 0%;
+    position: relative;
+    margin-left: 0%;
+    margin-right: 0px;
+  }
+  .itemHolder {
+    margin-bottom: 10%;
+    margin-left: 10% !important;
+    margin-right: 5% !important;
+  }
+}
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)  {
+    .mobileCardTitle {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+  }
+  .listBackground {
+    margin-left: 0%;
+    position: relative;
+    left: 0%;
+    margin-right: 0%;
+  }
+  .itemHolder {
+    margin-right: 3% !important;
+     margin-left: 5% !important;
+  }
+  .detailsBackground {
+  font-size: 1.8rem;
+}
 }

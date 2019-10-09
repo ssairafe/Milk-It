@@ -40,6 +40,7 @@ export default class App extends React.Component {
     }).then(response => {
       return response.json();
     }).then(response => {
+      alert('Your order has been received. Thank you!');
       this.setState({
         cart: [],
         view: {
@@ -51,7 +52,7 @@ export default class App extends React.Component {
   }
 
   addToCart(product) {
-    fetch('/api/cart.php', {
+    fetch('/api/cart.php/' + product.id, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -63,11 +64,13 @@ export default class App extends React.Component {
       this.setState({
         cart: this.state.cart.concat(product)
       });
-    });
+    }).then(() => this.getCartItems());
   }
 
   getCartItems() {
-    fetch('/api/cart.php').then(result => result.json())
+    fetch('/api/cart.php').then(result => {
+      return result.json();
+    })
       .then(result => {
         this.setState({
           cart: result
@@ -99,31 +102,35 @@ export default class App extends React.Component {
   render() {
     if (this.state.view.name === 'details') {
       return (
-        <div className="container-fluid">
+        <div>
           <Header view={this.setView} items={this.state.cart.length}/>
           <ProductDetails view={this.setView} id={this.state.view.params.id} add={this.addToCart}/>
         </div>
       );
     } else if (this.state.view.name === 'catalog') {
       return (
-        <div className="container-fluid">
+        <div>
           <Header view={this.setView} items={this.state.cart.length}/>
           <ProductList view={this.setView} />
         </div>
       );
     } else if (this.state.view.name === 'cart') {
       return (
-        <div className="container-fluid">
+        <div>
           <Header view={this.setView} items={this.state.cart.length} />
           <CartSummaryItems total={this.grandTotal()} view={this.setView} items={this.state.cart} />
         </div>
       );
     } else if (this.state.view.name === 'checkout') {
       return (
-        <div className="container">
+        <>
+        <div>
           <Header view={this.setView} items={this.state.cart.length} />
+        </div>
+        <div className="container">
           <CheckoutForm placeOrder={this.placeOrder}/>
         </div>
+        </>
       );
     }
   }
