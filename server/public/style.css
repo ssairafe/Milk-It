@@ -124,14 +124,15 @@ margin-bottom: 10%;
     display: none;
   }
 
-@media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
+  @media only screen
+and (min-device-width : 360px)
+and (max-device-width : 640px)
 and (orientation : portrait) {
   .mobileCardTitle {
     display: block;
     font-size: 3rem;
     text-align: center;
+    font-family: Lobster, cursive;
   }
   .listBackground {
     margin-left: 20%;
@@ -141,6 +142,85 @@ and (orientation : portrait) {
   }
   .detailsBackground {
   font-size: 1.8rem;
+}
+.head{
+  background-color: rgb(31, 29, 29);
+  width: 100vw;
+  height: 7rem;
+}
+.page-header{
+  color: white;
+  position: relative;
+  font-family: Lobster, cursive;
+  display: inline-block;
+  margin-left: 0%;
+  font-size: 5rem;
+}
+.fa-shopping-cart {
+  font-size: 4rem;
+  color: white;
+  position: relative;
+  display: inline-block;
+  left: 0%;
+  margin-left: 50%;
+}
+.logo {
+  width: 6rem;
+  display: inline-block;
+  position: relative;
+  transform: rotate(270deg);
+  margin-left: 5%;
+  vertical-align: top;
+}
+}
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+  .mobileCardTitle {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+    font-family: Lobster, cursive;
+  }
+  .listBackground {
+    margin-left: 20%;
+  }
+  .itemHolder {
+    margin-bottom: 20%;
+  }
+  .detailsBackground {
+  font-size: 1.8rem;
+}
+.head{
+  background-color: rgb(31, 29, 29);
+  width: 100vw;
+  height: 7rem;
+}
+.page-header{
+  color: white;
+  position: relative;
+  font-family: Lobster, cursive;
+  display: inline-block;
+  margin-left: 0%;
+  font-size: 5rem;
+}
+.fa-shopping-cart {
+  font-size: 4rem;
+  color: white;
+  position: relative;
+  display: inline-block;
+  left: 0%;
+  margin-left: 50%;
+}
+.logo {
+  width: 6rem;
+  display: inline-block;
+  position: relative;
+  transform: rotate(270deg);
+  margin-left: 5%;
+  vertical-align: top;
 }
 }
 
@@ -152,6 +232,7 @@ and (orientation : landscape) {
     display: block;
     font-size: 3rem;
     text-align: center;
+    font-family: Lobster, cursive;
   }
   .listBackground {
     margin-left: 20%;
@@ -161,6 +242,35 @@ and (orientation : landscape) {
   }
   .detailsBackground {
   font-size: 1.8rem;
+}
+.head{
+  background-color: rgb(31, 29, 29);
+  width: 100vw;
+  height: 7rem;
+}
+.page-header{
+  color: white;
+  position: relative;
+  font-family: Lobster, cursive;
+  display: inline-block;
+  margin-left: 0%;
+  font-size: 5rem;
+}
+.fa-shopping-cart {
+  font-size: 4rem;
+  color: white;
+  position: relative;
+  display: inline-block;
+  left: 0%;
+  margin-left: 50%;
+}
+.logo {
+  width: 6rem;
+  display: inline-block;
+  position: relative;
+  transform: rotate(270deg);
+  margin-left: 5%;
+  vertical-align: top;
 }
 }
 
@@ -172,6 +282,7 @@ and (orientation : portrait)  {
     display: block;
     font-size: 3rem;
     text-align: center;
+    font-family: Lobster, cursive;
   }
   .listBackground {
     margin-left: 20%;
@@ -181,6 +292,35 @@ and (orientation : portrait)  {
   }
   .detailsBackground {
   font-size: 1.8rem;
+}
+.head{
+  background-color: rgb(31, 29, 29);
+  width: 100vw;
+  height: 7rem;
+}
+.page-header{
+  color: white;
+  position: relative;
+  font-family: Lobster, cursive;
+  display: inline-block;
+  margin-left: 0%;
+  font-size: 5rem;
+}
+.fa-shopping-cart {
+  font-size: 4rem;
+  color: white;
+  position: relative;
+  display: inline-block;
+  left: 0%;
+  margin-left: 50%;
+}
+.logo {
+  width: 6rem;
+  display: inline-block;
+  position: relative;
+  transform: rotate(270deg);
+  margin-left: 5%;
+  vertical-align: top;
 }
 }
 
@@ -194,6 +334,7 @@ and (orientation : landscape)  {
     display: block;
     font-size: 3rem;
     text-align: center;
+    font-family: Lobster, cursive;
   }
   .listBackground {
     margin-left: 0%;
@@ -206,6 +347,35 @@ and (orientation : landscape)  {
     margin-left: 10% !important;
     margin-right: 5% !important;
   }
+  .head{
+  background-color: rgb(31, 29, 29);
+  width: 100vw;
+  height: 7rem;
+}
+.page-header{
+  color: white;
+  position: relative;
+  font-family: Lobster, cursive;
+  display: inline-block;
+  margin-left: 0%;
+  font-size: 5rem;
+}
+.fa-shopping-cart {
+  font-size: 4rem;
+  color: white;
+  position: relative;
+  display: inline-block;
+  left: 0%;
+  margin-left: 50%;
+}
+.logo {
+  width: 6rem;
+  display: inline-block;
+  position: relative;
+  transform: rotate(270deg);
+  margin-left: 5%;
+  vertical-align: top;
+}
 }
 @media only screen
 and (min-device-width : 768px)
@@ -215,6 +385,7 @@ and (orientation : landscape)  {
     display: block;
     font-size: 3rem;
     text-align: center;
+    font-family: Lobster, cursive;
   }
   .listBackground {
     margin-left: 0%;
@@ -228,5 +399,34 @@ and (orientation : landscape)  {
   }
   .detailsBackground {
   font-size: 1.8rem;
+}
+.head{
+  background-color: rgb(31, 29, 29);
+  width: 100vw;
+  height: 7rem;
+}
+.page-header{
+  color: white;
+  position: relative;
+  font-family: Lobster, cursive;
+  display: inline-block;
+  margin-left: 0%;
+  font-size: 5rem;
+}
+.fa-shopping-cart {
+  font-size: 4rem;
+  color: white;
+  position: relative;
+  display: inline-block;
+  left: 0%;
+  margin-left: 50%;
+}
+.logo {
+  width: 6rem;
+  display: inline-block;
+  position: relative;
+  transform: rotate(270deg);
+  margin-left: 5%;
+  vertical-align: top;
 }
 }
