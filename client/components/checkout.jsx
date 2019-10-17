@@ -25,11 +25,13 @@ class CheckoutForm extends React.Component {
   render() {
     return (
       <>
+
       <div className="row" style={{ 'height': '6rem' }}></div>
-      <div className="container" style={{ 'border': '1px solid black', 'backgroundColor': 'silver', 'width': '50%', 'textAlign': 'center' }}>
+      <div className="container" style={{ 'backgroundColor': 'white', 'width': '50%', 'textAlign': 'center' }}>
+        <h1>Checkout</h1>
         <form className="form-group" onSubmit={this.handleSubmit} >
           <div>
-            <label htmlFor="">
+            <label style={{ width: '90%' }} htmlFor="">
               <div className="row">
           Name:
                 <input className="form-control" name="name" value={this.state.name} required autoFocus onChange={this.handleChange}/>
@@ -37,7 +39,7 @@ class CheckoutForm extends React.Component {
             </label>
           </div>
           <div>
-            <label htmlFor="">
+            <label style={{ width: '90%' }} htmlFor="">
               <div className="row">
           Card Number:
                 <input className="form-control" name="creditCard" value={this.state.creditCard} required autoFocus onChange={this.handleChange}/>
@@ -45,7 +47,7 @@ class CheckoutForm extends React.Component {
             </label>
           </div>
           <div>
-            <label htmlFor="">
+            <label style={{ width: '90%' }} htmlFor="">
               <div className="row">
           Shipping Address:
                 <textarea className="form-control" name="shippingAddress" value={this.state.shippingAddress} required autoFocus onChange={this.handleChange}/>
