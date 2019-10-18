@@ -86,8 +86,7 @@ class ProductDetails extends React.Component {
             </div>
           </div>
         </div>
-        <div style={{ 'height': '2rem' }}>
-        </div>
+        <div style={{ 'height': '2rem' }}></div>
         <div className="container-fluid">
           <div className="container">
             <div className="prodDetails">{this.state.product.longDescription}</div>
