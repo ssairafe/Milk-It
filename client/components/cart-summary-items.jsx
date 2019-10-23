@@ -1,7 +1,10 @@
 import React from 'react';
 
 function CartSummaryItems(props) {
+  let grandTotal = 0;
   const renderingItems = props.items.map(item => {
+    let sum = item.price * item.count;
+    grandTotal = grandTotal + sum;
     return (
       <div className="row" key={item.id}>
         <div style={{ 'textAlign': 'center' }} className="m-2 col-md">
@@ -9,6 +12,7 @@ function CartSummaryItems(props) {
         </div>
         <div className="col-md">
           <div className="m-2 row">{item.name}</div>
+          <div className="m-2 row">Quantity: {item.count}</div>
           <div className="m-2 row">{('$' + (item.price / 100).toFixed(2))}</div>
           <div className="m-2 row">{item.shortDescription}</div>
         </div>
@@ -25,7 +29,10 @@ function CartSummaryItems(props) {
       <div style={{ 'fontFamily': 'Lobster, cursive' }} className="row wickedCart">
         <div className="col"></div>
         <div className="col">Your Milk</div>
-        <div className="col"></div>
+        <div className="col" ><a onClick={() => {
+          props.clear();
+        }} href="#" style={{ 'backgroundColor': 'black', 'color': 'white', border: 'none', marginLeft: '1rem', marginTop: '1rem' }} className="btn btn-primary mb-3"> Clear Cart
+        </a></div>
       </div>
       <div className="container">
         {renderingItems}
@@ -34,7 +41,7 @@ function CartSummaryItems(props) {
           <div className="col-md"></div>
           <div className="col-md">
             <div className="row">
-               Your Total: {props.total}
+              Your Total: {('$' + (grandTotal / 100).toFixed(2))}
             </div>
             <div className="row">
               <a onClick={() => {

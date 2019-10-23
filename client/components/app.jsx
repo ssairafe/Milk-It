@@ -4,6 +4,7 @@ import ProductList from './product-list';
 import ProductDetails from './product-details';
 import CartSummaryItems from './cart-summary-items';
 import CheckoutForm from './checkout';
+import OrderModal from './order-modal';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -18,11 +19,15 @@ export default class App extends React.Component {
     };
     this.setView = this.setView.bind(this);
     this.addToCart = this.addToCart.bind(this);
-    this.grandTotal = this.grandTotal.bind(this);
     this.placeOrder = this.placeOrder.bind(this);
+    this.clearCart = this.clearCart.bind(this);
   }
 
   componentDidMount() {
+    this.getCartItems();
+
+  }
+  componentDidUpdate() {
     this.getCartItems();
 
   }
@@ -40,15 +45,29 @@ export default class App extends React.Component {
     }).then(response => {
       return response.json();
     }).then(response => {
-      alert('Your order has been received. Thank you!');
       this.setState({
         cart: [],
         view: {
-          name: 'catalog',
+          name: 'orderSubmitted',
           params: {}
         }
       });
     });
+  }
+
+  clearCart(product) {
+    fetch('/api/cart.php/', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(response => {
+      return response.json();
+    }).then(response => {
+      this.setState({
+        cart: response
+      });
+    }).then(() => this.getCartItems());
   }
 
   addToCart(product) {
@@ -88,17 +107,6 @@ export default class App extends React.Component {
     });
   }
 
-  grandTotal() {
-    let total = 0;
-    for (let i = 0; i < this.state.cart.length; i++) {
-      let price = parseInt(this.state.cart[i].price);
-      total = total + price;
-
-    }
-    total = (total / 100).toFixed(2);
-    return '$' + total;
-  }
-
   render() {
     if (this.state.view.name === 'details') {
       return (
@@ -118,7 +126,7 @@ export default class App extends React.Component {
       return (
         <div>
           <Header view={this.setView} items={this.state.cart.length} />
-          <CartSummaryItems total={this.grandTotal()} view={this.setView} items={this.state.cart} />
+          <CartSummaryItems view={this.setView} items={this.state.cart} clear={this.clearCart} />
         </div>
       );
     } else if (this.state.view.name === 'checkout') {
@@ -130,6 +138,18 @@ export default class App extends React.Component {
         <div className="container">
           <CheckoutForm placeOrder={this.placeOrder}/>
         </div>
+        </>
+      );
+    } else if (this.state.view.name === 'orderSubmitted') {
+      return (
+        <>
+          <div>
+            <Header view={this.setView} items={this.state.cart.length} />
+          </div>
+          <div className="container">
+            <CheckoutForm placeOrder={this.placeOrder} />
+          </div>
+          <OrderModal view={this.setView} clearData={this.clearCart}/>
         </>
       );
     }
