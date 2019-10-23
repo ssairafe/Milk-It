@@ -37,7 +37,7 @@ mysqli_query($conn , "START TRANSACTION");
 
 $priceDataResult =mysqli_query($conn, "SELECT `products`.`price` from `products` WHERE `id`={$id}");
 $priceData = mysqli_fetch_assoc($priceDataResult);
-$price = $priceData['price'] * $count;
+$price = $priceData['price'];
 
 $insertQuery = "INSERT INTO `cartItems`(`productID`, `price`, `cartID`, `count`, `added`) VALUES ({$id}, {$price}, {$cartId}, {$count}, NOW())";
 $queryInsertResult = mysqli_query($conn,$insertQuery);

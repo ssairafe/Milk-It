@@ -33,13 +33,8 @@ class ProductDetails extends React.Component {
   }
 
   getCountMinus() {
-    if (this.state.product.counter < 1) {
+    if (this.state.product.counter < 2) {
       return null;
-      // let tempProduct = this.state.product;
-      // tempProduct.counter = 0;
-      // this.setState({
-      //   product: tempProduct
-      // });
     } else {
       let tempProduct = this.state.product;
       tempProduct.counter = parseInt(tempProduct.counter);
@@ -74,12 +69,12 @@ class ProductDetails extends React.Component {
                 this.props.add(this.state.product);
               }} href="#" className="btn btn-primary mb-4" style={{ border: 'none', backgroundColor: 'black', marginTop: '5%' }}>Add to Cart
               </button>
-              <div style={{ position: 'relative', display: 'inline-block', marginLeft: '5%' }}>
+              <div style={{ position: 'relative', display: 'inline-block', marginLeft: '10%' }}>
                 <div style={{ position: 'relative', display: 'inline-block' }}>
-                  <div onClick={() => { this.getCountPlus(); }} style={{ position: 'relative', display: 'inline-block', transform: 'rotate(180deg)', fontSize: '2rem', top: '30px', cursor: 'pointer' }}>v</div>
-                  <div onClick={() => { this.getCountMinus(); }} style={{ position: 'relative', display: 'block', fontSize: '2rem', cursor: 'pointer' }}>v</div>
+                  <h3 onClick={() => { this.getCountPlus(); }} style={{ position: 'relative', display: 'inline-block', transform: 'rotate(180deg)', fontSize: '2rem', top: '15px', cursor: 'pointer' }}>v</h3>
+                  <h3 onClick={() => { this.getCountMinus(); }} style={{ position: 'relative', display: 'block', fontSize: '2rem', cursor: 'pointer' }}>v</h3>
                 </div>
-                <div style={{ position: 'relative', display: 'inline-block', left: '20%', fontSize: '2rem' }}>
+                <div style={{ position: 'relative', display: 'inline-block', left: '20%', fontSize: '3rem' }}>
                   {this.state.product.counter}
                 </div>
               </div>
