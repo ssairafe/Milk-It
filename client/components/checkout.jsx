@@ -25,7 +25,6 @@ class CheckoutForm extends React.Component {
   render() {
     return (
       <>
-
       <div className="row" style={{ 'height': '6rem' }}></div>
       <div className="container" style={{ 'backgroundColor': 'white', 'width': '50%', 'textAlign': 'center' }}>
         <h1>Checkout</h1>
@@ -42,7 +41,7 @@ class CheckoutForm extends React.Component {
             <label style={{ width: '90%' }} htmlFor="">
               <div className="row">
           Card Number:
-                <input className="form-control" name="creditCard" value={this.state.creditCard} required autoFocus onChange={this.handleChange}/>
+                <input type="text" maxLength="16" minLength="16" pattern="[0-9]*" className="form-control" name="creditCard" value={this.state.creditCard} required autoFocus onChange={this.handleChange}/>
               </div>
             </label>
           </div>

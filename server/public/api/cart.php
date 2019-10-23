@@ -13,6 +13,8 @@ if ($method == 'GET') {
 } else if ($method == 'POST') {
   http_response_code(201);
   require ('cart-add.php');
+} else if ($method == 'DELETE') {
+  require ('cart-delete.php');
 } else {
   http_response_code(404);
   print(json_encode([
