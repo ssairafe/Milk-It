@@ -5,13 +5,14 @@ import ProductDetails from './product-details';
 import CartSummaryItems from './cart-summary-items';
 import CheckoutForm from './checkout';
 import OrderModal from './order-modal';
+import DisclaimerModal from './disclaimer';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       view: {
-        name: 'catalog',
+        name: 'disclaimer',
         params: {}
       },
       cart: []
@@ -138,6 +139,15 @@ export default class App extends React.Component {
         <div className="container">
           <CheckoutForm placeOrder={this.placeOrder}/>
         </div>
+        </>
+      );
+    } else if (this.state.view.name === 'disclaimer') {
+      return (
+        <>
+          <div>
+            <Header view={this.setView} items={this.state.cart.length} />
+          </div>
+          <DisclaimerModal view={this.setView} />
         </>
       );
     } else if (this.state.view.name === 'orderSubmitted') {
