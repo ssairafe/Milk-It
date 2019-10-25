@@ -24,3 +24,7 @@ This is a shopping cart that sells exotic milk.
 
 12. user can view product details
 
+## NPM Scripts
+
+- `dev` - Start Webpack Dev Server at `localhost:3000`
+- `build` - Run Webpack to build the React client into `server/public`.
