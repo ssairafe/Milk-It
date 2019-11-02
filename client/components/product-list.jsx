@@ -36,8 +36,10 @@ class ProductList extends React.Component {
     });
 
     return (
-      <div className="row listBackground">
-        {renderingItems}
+      <div className="container-fluid">
+        <div className="row listBackground">
+          {renderingItems}
+        </div>
       </div>
     );
   }

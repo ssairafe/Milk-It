@@ -52,7 +52,7 @@ margin-bottom: 10%;
 
 .head{
   background-color: rgb(31, 29, 29);
-  width: 100vw;
+  width: 100%;
 }
 
 
@@ -105,9 +105,8 @@ margin-bottom: 10%;
 }
 
 .listBackground {
-  margin-left: 10%;
+  margin-left: 13%;
   margin-bottom: 10%;
-  margin-right: 0px;
 }
 
 .Cow-Milk-title {
@@ -139,7 +138,11 @@ margin-bottom: 10%;
 .mobileCardTitle {
     display: none;
   }
-
+.removeButton {
+  font-size: 1.8rem;
+  font-family: Lobster, cursive;
+  cursor: pointer;
+}
   @media only screen
 and (min-device-width : 360px)
 and (max-device-width : 640px)
@@ -237,6 +240,17 @@ and (orientation : portrait) {
   transform: rotate(270deg);
   margin-left: 5%;
   vertical-align: top;
+}
+.cartCount {
+    font-size: 2.3rem;
+    position: absolute;
+    color: black;
+    bottom: 37%;
+    left: 50%;
+    display: inline;
+}
+.claimerText{
+  font-size: 8rem;
 }
 }
 

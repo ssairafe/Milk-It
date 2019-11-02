@@ -15,6 +15,9 @@ function CartSummaryItems(props) {
           <div className="m-2 row">Quantity: {item.count}</div>
           <div className="m-2 row">{('$' + (item.price / 100).toFixed(2))}</div>
           <div className="m-2 row">{item.shortDescription}</div>
+          <div className="m-2 row removeButton" onClick={() => {
+            props.delete(item);
+          }}>Remove Item</div>
         </div>
       </div>
     );
@@ -24,15 +27,20 @@ function CartSummaryItems(props) {
     <>
       <a onClick={() => {
         props.view('catalog', {});
-      }} href="#" style={{ 'backgroundColor': 'black', 'color': 'white', border: 'none', marginLeft: '1rem', marginTop: '1rem' }} className="btn btn-primary mb-3">&#60;- Back to Catalog
+      }} href="#" style={{ fontFamily: 'Lobster, cursive', fontSize: '2rem', marginLeft: '1rem', marginTop: '3rem', color: 'black', border: 'none' }} >&#60;- Back to Catalog
       </a>
-      <div style={{ 'fontFamily': 'Lobster, cursive' }} className="row wickedCart">
-        <div className="col"></div>
-        <div className="col">Your Milk</div>
-        <div className="col" ><a onClick={() => {
-          props.clear();
-        }} href="#" style={{ 'backgroundColor': 'black', 'color': 'white', border: 'none', marginLeft: '1rem', marginTop: '1rem' }} className="btn btn-primary mb-3"> Clear Cart
-        </a></div>
+      <div className="container-fluid">
+        <div style={{ 'fontFamily': 'Lobster, cursive' }} className="row wickedCart">
+          <div className="col"></div>
+          <div className="col">Your Milk</div>
+          <div className="col" >
+            <a onClick={() => {
+              props.clear();
+              props.refreshCart([]);
+            }} href="#" style={{ 'backgroundColor': 'black', 'color': 'white', border: 'none', marginLeft: '1rem', marginTop: '1rem' }} className="btn btn-primary mb-3"> Clear Cart
+            </a>
+          </div>
+        </div>
       </div>
       <div className="container">
         {renderingItems}

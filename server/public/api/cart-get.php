@@ -11,7 +11,7 @@ if(empty($_SESSION['cartId'])) {
 $cartId = intval($_SESSION['cartId']);
 
 $query = mysqli_query($conn,
-"SELECT * FROM `cartItems` INNER JOIN `products` ON cartItems.productId = products.id  WHERE `cartId`= {$cartId}"
+"SELECT * FROM `products` INNER JOIN `cartItems` ON cartItems.productId = products.id WHERE `cartId`= {$cartId}"
 );
 
 $output = [];

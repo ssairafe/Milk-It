@@ -54,7 +54,7 @@ class ProductDetails extends React.Component {
       <>
         <a onClick={() => {
           this.props.view('catalog', { id: this.state.product });
-        }} href="#" style={{ marginLeft: '1rem', marginTop: '1rem', 'backgroundColor': 'black', 'color': 'white', border: 'none' }} className="btn btn-primary mb-4">&#60;- Back to Catalog
+        }} href="#" style={{ fontFamily: 'Lobster, cursive', fontSize: '2rem', marginLeft: '1rem', marginTop: '3rem', color: 'black', border: 'none' }} >&#60;- Back to Catalog
         </a>
         <div className="container">
           <div style={{ display: 'inline-block' }}>
