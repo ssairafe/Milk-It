@@ -143,6 +143,30 @@ margin-bottom: 10%;
   font-family: Lobster, cursive;
   cursor: pointer;
 }
+.cartProduct {
+  margin-top: 2rem;
+}
+.backToCatalog{
+  font-size: 2rem;
+}
+.countButton {
+  font-size: 2rem;
+}
+#productCounter {
+  font-size: 3rem;
+}
+#arrowHolder {
+  top: 42%;
+  right: 46%;
+}
+#goatCounter {
+    top: 38%;
+    right: 47%;
+}
+#lionCounter {
+  top: 31%;
+  right: 46%;
+}
   @media only screen
 and (min-device-width : 360px)
 and (max-device-width : 640px)
@@ -197,6 +221,49 @@ and (orientation : portrait) {
 and (min-device-width : 375px)
 and (max-device-width : 667px)
 and (orientation : portrait) {
+  #lionCounter {
+  top: 41%;
+  right: 47%;
+}
+  #goatCounter {
+    top: 41%;
+    right: 47%;
+  }
+
+  #arrowHolder {
+    top: 42%;
+    right: 48%;
+  }
+  .productName {
+    font-size: 4rem;
+  }
+
+  .countButton {
+  font-size: 4rem;
+}
+#productCounter {
+  font-size: 5rem;
+}
+
+  .prodInfoImage {
+    margin-bottom: 15rem;
+  }
+
+  .backToCatalog{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  .cartProductInfo {
+    font-size: 2rem;
+  }
+  .prodDetails, .cartTotal, .btn, .removeButton {
+    font-size: 3rem;
+  }
+  .cartTitle {
+    font-size: 4rem;
+  }
+
   .mobileCardTitle {
     display: block;
     font-size: 3rem;
@@ -210,7 +277,7 @@ and (orientation : portrait) {
     margin-bottom: 20%;
   }
   .detailsBackground {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 .head{
   background-color: rgb(31, 29, 29);
@@ -258,6 +325,12 @@ and (orientation : portrait) {
 and (min-device-width : 375px)
 and (max-device-width : 667px)
 and (orientation : landscape) {
+   .cartProductInfo, .cartTotal, .btn, .removeButton {
+    font-size: 2rem;
+  }
+  .cartTitle {
+    font-size: 4rem;
+  }
   .mobileCardTitle {
     display: block;
     font-size: 3rem;
@@ -308,6 +381,10 @@ and (orientation : landscape) {
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : portrait)  {
+   #arrowHolder {
+    top: 34%;
+    right: 37%;
+  }
   .mobileCardTitle {
     display: block;
     font-size: 3rem;
@@ -360,6 +437,10 @@ and (orientation : portrait)  {
 and (min-device-width : 1024px)
 and (max-device-width : 1366px)
 and (orientation : landscape)  {
+  #arrowHolder {
+    top: 38%;
+    right: 46%;
+  }
   .mobileCardTitle {
     display: block;
     font-size: 3rem;
