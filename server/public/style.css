@@ -597,22 +597,7 @@ and (orientation : portrait)  {
   vertical-align: top;
 }
 }
-@media only screen
-and (min-device-width : 1024px)
-and (orientation : portrait)  {
-  #arrowHolder {
-    top: 34%;
-    right: 37%;
-  }
-  #goatCounter {
-    top: 34%;
-    right: 37%;
-  }
-  #lionCounter {
-    top: 34%;
-    right: 37%;
-  }
-}
+
 @media only screen
 and (max-device-width : 812px)
 and (orientation : portrait)  {
@@ -629,22 +614,7 @@ and (orientation : portrait)  {
     right: 48%;
   }
 }
-@media only screen
-and (max-device-width : 768px)
-and (orientation : portrait)  {
-  #arrowHolder {
-    top: 38%;
-    right: 28%;
-  }
-  #goatCounter {
-    top: 38%;
-    right: 28%;
-  }
-  #lionCounter {
-    top: 38%;
-    right: 28%;
-  }
-}
+
 @media only screen
 and (max-device-width : 740px)
 and (orientation : landscape)  {
@@ -899,8 +869,6 @@ and (orientation : portrait) {
 }
 }
 
-
-
 @media only screen
 and (max-device-width : 360px)
 and (orientation : portrait)  {
@@ -915,5 +883,37 @@ and (orientation : portrait)  {
   #lionCounter {
     top: 29%;
     right: 28%;
+  }
+}
+@media only screen
+and (max-device-width : 768px)
+and (orientation : portrait)  {
+  #arrowHolder {
+    top: 38%;
+    right: 28%;
+  }
+  #goatCounter {
+    top: 38%;
+    right: 28%;
+  }
+  #lionCounter {
+    top: 38%;
+    right: 28%;
+  }
+}
+@media only screen
+and (min-device-width : 1024px)
+and (orientation : portrait)  {
+  #arrowHolder {
+    top: 34%;
+    right: 37%;
+  }
+  #goatCounter {
+    top: 34%;
+    right: 37%;
+  }
+  #lionCounter {
+    top: 34%;
+    right: 37%;
   }
 }
