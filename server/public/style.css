@@ -1,7 +1,7 @@
 .modalOrder{
   text-align: center;
   margin-top: 20vh;
-  height: 70vh;
+  height: 55vh;
   width: 70vw;
   background-color: black;
   padding-top: 10%;
@@ -155,94 +155,14 @@ margin-bottom: 10%;
 #productCounter {
   font-size: 3rem;
 }
-#arrowHolder {
-  top: 47%;
-  right: 46%;
-}
-#goatCounter {
-    top: 41%;
-    right: 47%;
-}
-#lionCounter {
-  top: 33%;
-  right: 46%;
-}
-
-@media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : landscape)  {
-  #arrowHolder {
-    top: 93%;
-    right: 18%;
-  }
-  #goatCounter {
-    top: 93%;
-    right: 19%;
-  }
-  #lionCounter {
-    top: 93%;
-    right: 19%;
-  }
-}
 
 
-@media only screen
-and (min-device-width : 411px)
-and (max-device-width : 823px)
-and (orientation : landscape)  {
-  #arrowHolder {
-    top: 103%;
-    right: 27%;
-  }
-  #goatCounter {
-    top: 103%;
-    right: 27%;
-  }
-  #lionCounter {
-    top: 103%;
-    right: 27%;
-  }
-}
-
-
-
-
-@media only screen
-and (min-device-width : 411px)
-and (max-device-width : 731px)
-and (orientation : landscape)  {
-  #arrowHolder {
-    top: 60%;
-    right: 27%;
-  }
-  #goatCounter {
-    top: 55%;
-    right: 27%;
-  }
-  #lionCounter {
-    top: 48%;
-    right: 26%;
-  }
-}
 
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 667px)
 and (orientation : landscape) {
-  #lionCounter {
-    top: 38%;
-    right: 28%;
-  }
-  #goatCounter {
-    top: 38%;
-    right: 28%;
-  }
 
-   #arrowHolder {
-    top: 93%;
-    right: 19%;
-  }
    .cartProductInfo, .cartTotal, .btn, .removeButton {
     font-size: 2rem;
   }
@@ -296,27 +216,11 @@ and (orientation : landscape) {
 }
 
 
-
-
-
-
-
 @media only screen
 and (min-device-width : 1024px)
 and (max-device-width : 1366px)
 and (orientation : landscape)  {
-  #lionCounter {
-    top: 30%;
-    right: 46%;
-  }
-  #goatCounter {
-    top: 35%;
-    right: 47%;
-  }
-  #arrowHolder {
-    top: 38%;
-    right: 46%;
-  }
+
   .mobileCardTitle {
     display: block;
     font-size: 3rem;
@@ -324,9 +228,8 @@ and (orientation : landscape)  {
     font-family: Lobster, cursive;
   }
   .listBackground {
-    margin-left: 0%;
     position: relative;
-    margin-left: 0%;
+    margin-left: 16%;
     margin-right: 0px;
   }
   .itemHolder {
@@ -363,23 +266,16 @@ and (orientation : landscape)  {
   margin-left: 5%;
   vertical-align: top;
 }
+.cartCount {
+  font-size: 2rem;
+}
 }
 @media only screen
 and (max-device-width : 1024px)
 and (orientation : landscape)  {
-  #lionCounter {
-    top: 60%;
-    right: 37%;
-  }
-  #goatCounter {
-    top: 60%;
-    right: 37%;
-  }
-
-   #arrowHolder {
-    top: 60%;
-    right: 37%;
-  }
+  .cartCount {
+  font-size: 2rem;
+}
     .mobileCardTitle {
     display: block;
     font-size: 3rem;
@@ -433,58 +329,23 @@ and (orientation : landscape)  {
 and (min-device-width : 375px)
 and (max-device-width : 812px)
 and (orientation : landscape)  {
-  #arrowHolder {
-    top: 110%;
-    right: 27%;
-  }
-  #goatCounter {
-    top: 110%;
-    right: 28%;
-  }
-  #lionCounter {
-    top: 110%;
-    right: 27%;
-  }
+
   .claimerText {
     font-size: 2rem !important;
   }
 }
 
-@media only screen
-and (max-device-width : 823px)
-and (orientation : portrait)  {
-  #arrowHolder {
-    top: 37%;
-    right: 47%;
-  }
-  #goatCounter {
-    top: 37%;
-    right: 47%;
-  }
-  #lionCounter {
-    top: 37%;
-    right: 47%;
-  }
-}
+
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 667px)
 and (orientation : landscape) {
-  #lionCounter {
-    top: 93%;
-    right: 19%;
-  }
-  #goatCounter {
-    top: 93%;
-    right: 19%;
-  }
 
-   #arrowHolder {
-    top: 93%;
-    right: 19%;
-  }
-   .cartProductInfo, .cartTotal, .btn, .removeButton {
+   .cartProductInfo, .cartTotal, .removeButton {
     font-size: 2rem;
+  }
+  .btn {
+    font-size: 1.5rem;
   }
   .cartTitle {
     font-size: 4rem;
@@ -539,19 +400,7 @@ and (orientation : landscape) {
 @media only screen
 and (max-device-width : 1024px)
 and (orientation : portrait)  {
-  #lionCounter {
-    top: 38%;
-    right: 28%;
-  }
-  #goatCounter {
-    top: 38%;
-    right: 28%;
-  }
 
-   #arrowHolder {
-    top: 38%;
-    right: 28%;
-  }
   .mobileCardTitle {
     display: block;
     font-size: 3rem;
@@ -596,108 +445,6 @@ and (orientation : portrait)  {
   margin-left: 5%;
   vertical-align: top;
 }
-}
-
-@media only screen
-and (max-device-width : 812px)
-and (orientation : portrait)  {
-  #arrowHolder {
-    top: 31%;
-    right: 48%;
-  }
-  #goatCounter {
-    top: 31%;
-    right: 47%;
-  }
-  #lionCounter {
-    top: 31%;
-    right: 48%;
-  }
-}
-
-@media only screen
-and (max-device-width : 740px)
-and (orientation : landscape)  {
-  #arrowHolder {
-    top: 90%;
-    right: 28%;
-  }
-  #goatCounter {
-    top: 90%;
-    right: 28%;
-  }
-  #lionCounter {
-    top: 90%;
-    right: 28%;
-  }
-}
-
-@media only screen
-and (max-device-width : 667px)
-and (orientation : landscape)  {
-  #arrowHolder {
-    top: 93%;
-    right: 19%;
-  }
-  #goatCounter {
-    top: 93%;
-    right: 19%;
-  }
-  #lionCounter {
-    top: 93%;
-    right: 19%;
-  }
-}
-
-@media only screen
-and (max-device-width : 640px)
-and (orientation : landscape)  {
-  #arrowHolder {
-    top: 93%;
-    right: 19%;
-  }
-  #goatCounter {
-    top: 93%;
-    right: 19%;
-  }
-  #lionCounter {
-    top: 93%;
-    right: 19%;
-  }
-}
-
-@media only screen
-and (max-device-width : 731px)
-and (orientation : portrait)  {
-  #arrowHolder {
-    top: 37%;
-    right: 48%;
-  }
-  #goatCounter {
-    top: 37%;
-    right: 48%;
-  }
-  #lionCounter {
-    top: 37%;
-    right: 48%;
-  }
-}
-
-@media only screen
-and (max-device-width : 420px)
-and (orientation : portrait)  {
-  #arrowHolder {
-    top: 37%;
-    right: 48%;
-  }
-  #goatCounter {
-    top: 37%;
-    right: 48%;
-  }
-  #lionCounter {
-    top: 37%;
-    right: 48%;
-  }
 }
 
  @media only screen
@@ -749,45 +496,18 @@ and (orientation : portrait) {
   vertical-align: top;
 }
 }
-@media only screen
-and (max-device-width : 375px)
-and (orientation : portrait)  {
-  #arrowHolder {
-    top: 31%;
-    right: 48%;
-  }
-  #goatCounter {
-    top: 31%;
-    right: 48%;
-  }
-  #lionCounter {
-    top: 31%;
-    right: 48%;
-  }
-}
+
 
 @media only screen
 and (min-device-width : 375px)
 and (orientation : portrait) {
-  #lionCounter {
-  top: 41%;
-  right: 47%;
-}
-  #goatCounter {
-    top: 41%;
-    right: 47%;
-  }
 
-  #arrowHolder {
-    top: 42%;
-    right: 48%;
-  }
   .productName {
     font-size: 4rem;
   }
 
   .countButton {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 #productCounter {
   font-size: 5rem;
@@ -802,10 +522,10 @@ and (orientation : portrait) {
     margin-bottom: 2rem;
   }
 
-  .cartProductInfo {
+  .cartProductInfo, .btn {
     font-size: 2rem;
   }
-  .prodDetails, .cartTotal, .btn, .removeButton {
+  .prodDetails, .cartTotal,  .removeButton {
     font-size: 3rem;
   }
   .cartTitle {
@@ -865,55 +585,13 @@ and (orientation : portrait) {
     display: inline;
 }
 .claimerText{
-  font-size: 8rem;
+  font-size: 7rem;
 }
-}
-
-@media only screen
-and (max-device-width : 360px)
-and (orientation : portrait)  {
-  #arrowHolder {
-    top: 29%;
-    right: 28%;
-  }
-  #goatCounter {
-    top: 29%;
-    right: 28%;
-  }
-  #lionCounter {
-    top: 29%;
-    right: 28%;
-  }
 }
 @media only screen
-and (max-device-width : 768px)
-and (orientation : portrait)  {
-  #arrowHolder {
-    top: 38%;
-    right: 28%;
-  }
-  #goatCounter {
-    top: 38%;
-    right: 28%;
-  }
-  #lionCounter {
-    top: 38%;
-    right: 28%;
-  }
-}
-@media only screen
-and (min-device-width : 1024px)
-and (orientation : portrait)  {
-  #arrowHolder {
-    top: 34%;
-    right: 37%;
-  }
-  #goatCounter {
-    top: 34%;
-    right: 37%;
-  }
-  #lionCounter {
-    top: 34%;
-    right: 37%;
-  }
+and (max-device-width : 824px)
+and (orientation : landscape) {
+ .claimerText {
+   font-size: 2rem !important;
+ }
 }

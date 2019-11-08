@@ -65,48 +65,36 @@ class ProductDetails extends React.Component {
             <h1 className="productName">{this.state.product.name}</h1>
             <h2>{'$' + (this.state.product.price / 100).toFixed(2)}</h2>
             {this.state.product.shortDescription}
-            <div>
-              <button onClick={() => {
-                this.props.add(this.state.product);
-                this.setState({
-                  addedToCart: true
-                });
-                setTimeout(() => {
-                  this.setState({
-                    addedToCart: false
-                  });
-                }, 1000);
-              }} href="#" className="btn btn-primary mb-4" style={{ border: 'none', backgroundColor: 'black', marginTop: '5%' }}>Add to Cart
-              </button>
-              {this.state.product.name === 'Lioness-Milk' ? <div id="lionCounter" style={{ position: 'absolute', display: 'inline-block', marginLeft: '10%' }}>
-                <div style={{ position: 'relative', display: 'inline-block' }}>
-                  <h3 className="countButton" onClick={() => { this.getCountPlus(); }} style={{ position: 'relative', display: 'inline-block', transform: 'rotate(180deg)', top: '15px', cursor: 'pointer' }}>v</h3>
-                  <h3 className="countButton" onClick={() => { this.getCountMinus(); }} style={{ position: 'relative', display: 'block', cursor: 'pointer' }}>v</h3>
-                </div>
-                <div id="productCounter" style={{ position: 'relative', display: 'inline-block', left: '5%' }}>
-                  {this.state.product.counter}
-                </div>
-              </div> : this.state.product.name === 'Goat-Milk'
-                ? <div id="goatCounter" style={{ position: 'absolute', display: 'inline-block', marginLeft: '10%' }}>
-                  <div style={{ position: 'relative', display: 'inline-block' }}>
-                    <h3 className="countButton" onClick={() => { this.getCountPlus(); }} style={{ position: 'relative', display: 'inline-block', transform: 'rotate(180deg)', top: '15px', cursor: 'pointer' }}>v</h3>
-                    <h3 className="countButton" onClick={() => { this.getCountMinus(); }} style={{ position: 'relative', display: 'block', cursor: 'pointer' }}>v</h3>
-                  </div>
-                  <div id="productCounter" style={{ position: 'relative', display: 'inline-block', left: '5%' }}>
-                    {this.state.product.counter}
+            <div className="container">
+              <div className="row">
+                <div className="col-4">
+                  <div id="arrowHolder" style={{ position: 'absolute', display: 'inline-block', marginLeft: '10%' }}>
+                    <div style={{ position: 'relative', display: 'inline-block' }}>
+                      <h3 className="countButton" onClick={() => { this.getCountPlus(); }} style={{ position: 'relative', display: 'inline-block', transform: 'rotate(180deg)', top: '15px', cursor: 'pointer' }}>v</h3>
+                      <h3 className="countButton" onClick={() => { this.getCountMinus(); }} style={{ position: 'relative', display: 'block', cursor: 'pointer' }}>v</h3>
+                    </div>
+                    <div id="productCounter" style={{ position: 'relative', display: 'inline-block', left: '5%' }}>
+                      {this.state.product.counter}
+                    </div>
                   </div>
                 </div>
-                : <div id="arrowHolder" style={{ position: 'absolute', display: 'inline-block', marginLeft: '10%' }}>
-                  <div style={{ position: 'relative', display: 'inline-block' }}>
-                    <h3 className="countButton" onClick={() => { this.getCountPlus(); }} style={{ position: 'relative', display: 'inline-block', transform: 'rotate(180deg)', top: '15px', cursor: 'pointer' }}>v</h3>
-                    <h3 className="countButton" onClick={() => { this.getCountMinus(); }} style={{ position: 'relative', display: 'block', cursor: 'pointer' }}>v</h3>
-                  </div>
-                  <div id="productCounter" style={{ position: 'relative', display: 'inline-block', left: '5%' }}>
-                    {this.state.product.counter}
-                  </div>
-                </div>}
-              {this.state.addedToCart === true ? <div style={{ position: 'absolute', fontFamily: 'Staatliches, cursive', fontSize: '2rem' }}>Added to Cart!</div> : ''}
+                <div className="col-8">
+                  <button onClick={() => {
+                    this.props.add(this.state.product);
+                    this.setState({
+                      addedToCart: true
+                    });
+                    setTimeout(() => {
+                      this.setState({
+                        addedToCart: false
+                      });
+                    }, 1000);
+                  }} href="#" className="btn btn-primary mb-4" style={{ border: 'none', backgroundColor: 'black', marginTop: '10%' }}>Add to Cart
+                  </button>
+                </div>
+              </div>
             </div>
+            {this.state.addedToCart === true ? <div style={{ position: 'absolute', fontFamily: 'Staatliches, cursive', fontSize: '2rem' }}>Added to Cart!</div> : ''}
           </div>
         </div>
         <div style={{ 'height': '2rem' }}></div>
