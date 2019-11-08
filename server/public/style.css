@@ -167,7 +167,570 @@ margin-bottom: 10%;
   top: 33%;
   right: 46%;
 }
-  @media only screen
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape)  {
+  #arrowHolder {
+    top: 93%;
+    right: 18%;
+  }
+  #goatCounter {
+    top: 93%;
+    right: 19%;
+  }
+  #lionCounter {
+    top: 93%;
+    right: 19%;
+  }
+}
+
+
+@media only screen
+and (min-device-width : 411px)
+and (max-device-width : 823px)
+and (orientation : landscape)  {
+  #arrowHolder {
+    top: 103%;
+    right: 27%;
+  }
+  #goatCounter {
+    top: 103%;
+    right: 27%;
+  }
+  #lionCounter {
+    top: 103%;
+    right: 27%;
+  }
+}
+
+
+
+
+@media only screen
+and (min-device-width : 411px)
+and (max-device-width : 731px)
+and (orientation : landscape)  {
+  #arrowHolder {
+    top: 60%;
+    right: 27%;
+  }
+  #goatCounter {
+    top: 55%;
+    right: 27%;
+  }
+  #lionCounter {
+    top: 48%;
+    right: 26%;
+  }
+}
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape) {
+  #lionCounter {
+    top: 38%;
+    right: 28%;
+  }
+  #goatCounter {
+    top: 38%;
+    right: 28%;
+  }
+
+   #arrowHolder {
+    top: 93%;
+    right: 19%;
+  }
+   .cartProductInfo, .cartTotal, .btn, .removeButton {
+    font-size: 2rem;
+  }
+  .cartTitle {
+    font-size: 4rem;
+  }
+  .mobileCardTitle {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+    font-family: Lobster, cursive;
+  }
+  .listBackground {
+    margin-left: 20%;
+  }
+  .itemHolder {
+    margin-bottom: 20%;
+  }
+  .detailsBackground {
+  font-size: 1.8rem;
+}
+.head{
+  background-color: rgb(31, 29, 29);
+  width: 100vw;
+  height: 7rem;
+}
+.page-header{
+  color: white;
+  position: relative;
+  font-family: Lobster, cursive;
+  display: inline-block;
+  margin-left: 0%;
+  font-size: 5rem;
+}
+.fa-shopping-cart {
+  font-size: 4rem;
+  color: white;
+  position: relative;
+  display: inline-block;
+  left: 0%;
+  margin-left: 50%;
+}
+.logo {
+  width: 6rem;
+  display: inline-block;
+  position: relative;
+  transform: rotate(270deg);
+  margin-left: 5%;
+  vertical-align: top;
+}
+}
+
+
+
+
+
+
+
+@media only screen
+and (min-device-width : 1024px)
+and (max-device-width : 1366px)
+and (orientation : landscape)  {
+  #lionCounter {
+    top: 30%;
+    right: 46%;
+  }
+  #goatCounter {
+    top: 35%;
+    right: 47%;
+  }
+  #arrowHolder {
+    top: 38%;
+    right: 46%;
+  }
+  .mobileCardTitle {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+    font-family: Lobster, cursive;
+  }
+  .listBackground {
+    margin-left: 0%;
+    position: relative;
+    margin-left: 0%;
+    margin-right: 0px;
+  }
+  .itemHolder {
+    margin-bottom: 10%;
+    margin-left: 10% !important;
+    margin-right: 5% !important;
+  }
+  .head{
+  background-color: rgb(31, 29, 29);
+  width: 100vw;
+  height: 7rem;
+}
+.page-header{
+  color: white;
+  position: relative;
+  font-family: Lobster, cursive;
+  display: inline-block;
+  margin-left: 0%;
+  font-size: 5rem;
+}
+.fa-shopping-cart {
+  font-size: 4rem;
+  color: white;
+  position: relative;
+  display: inline-block;
+  left: 0%;
+  margin-left: 50%;
+}
+.logo {
+  width: 6rem;
+  display: inline-block;
+  position: relative;
+  transform: rotate(270deg);
+  margin-left: 5%;
+  vertical-align: top;
+}
+}
+@media only screen
+and (max-device-width : 1024px)
+and (orientation : landscape)  {
+  #lionCounter {
+    top: 60%;
+    right: 37%;
+  }
+  #goatCounter {
+    top: 60%;
+    right: 37%;
+  }
+
+   #arrowHolder {
+    top: 60%;
+    right: 37%;
+  }
+    .mobileCardTitle {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+    font-family: Lobster, cursive;
+  }
+  .listBackground {
+    margin-left: 0%;
+    position: relative;
+    left: 0%;
+    margin-right: 0%;
+  }
+  .itemHolder {
+    margin-right: 3% !important;
+     margin-left: 5% !important;
+  }
+  .detailsBackground {
+  font-size: 1.8rem;
+}
+.head{
+  background-color: rgb(31, 29, 29);
+  width: 100vw;
+  height: 7rem;
+}
+.page-header{
+  color: white;
+  position: relative;
+  font-family: Lobster, cursive;
+  display: inline-block;
+  margin-left: 0%;
+  font-size: 5rem;
+}
+.fa-shopping-cart {
+  font-size: 4rem;
+  color: white;
+  position: relative;
+  display: inline-block;
+  left: 0%;
+  margin-left: 50%;
+}
+.logo {
+  width: 6rem;
+  display: inline-block;
+  position: relative;
+  transform: rotate(270deg);
+  margin-left: 5%;
+  vertical-align: top;
+}
+}
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)
+and (orientation : landscape)  {
+  #arrowHolder {
+    top: 110%;
+    right: 27%;
+  }
+  #goatCounter {
+    top: 110%;
+    right: 28%;
+  }
+  #lionCounter {
+    top: 110%;
+    right: 27%;
+  }
+  .claimerText {
+    font-size: 2rem !important;
+  }
+}
+
+@media only screen
+and (max-device-width : 823px)
+and (orientation : portrait)  {
+  #arrowHolder {
+    top: 37%;
+    right: 47%;
+  }
+  #goatCounter {
+    top: 37%;
+    right: 47%;
+  }
+  #lionCounter {
+    top: 37%;
+    right: 47%;
+  }
+}
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape) {
+  #lionCounter {
+    top: 93%;
+    right: 19%;
+  }
+  #goatCounter {
+    top: 93%;
+    right: 19%;
+  }
+
+   #arrowHolder {
+    top: 93%;
+    right: 19%;
+  }
+   .cartProductInfo, .cartTotal, .btn, .removeButton {
+    font-size: 2rem;
+  }
+  .cartTitle {
+    font-size: 4rem;
+  }
+  .mobileCardTitle {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+    font-family: Lobster, cursive;
+  }
+  .listBackground {
+    margin-left: 20%;
+  }
+  .itemHolder {
+    margin-bottom: 20%;
+  }
+  .detailsBackground {
+  font-size: 1.8rem;
+}
+.head{
+  background-color: rgb(31, 29, 29);
+  width: 100vw;
+  height: 7rem;
+}
+.page-header{
+  color: white;
+  position: relative;
+  font-family: Lobster, cursive;
+  display: inline-block;
+  margin-left: 0%;
+  font-size: 5rem;
+}
+.fa-shopping-cart {
+  font-size: 4rem;
+  color: white;
+  position: relative;
+  display: inline-block;
+  left: 0%;
+  margin-left: 50%;
+}
+.logo {
+  width: 6rem;
+  display: inline-block;
+  position: relative;
+  transform: rotate(270deg);
+  margin-left: 5%;
+  vertical-align: top;
+}
+}
+
+
+@media only screen
+and (max-device-width : 1024px)
+and (orientation : portrait)  {
+  #lionCounter {
+    top: 38%;
+    right: 28%;
+  }
+  #goatCounter {
+    top: 38%;
+    right: 28%;
+  }
+
+   #arrowHolder {
+    top: 38%;
+    right: 28%;
+  }
+  .mobileCardTitle {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+    font-family: Lobster, cursive;
+  }
+  .listBackground {
+    margin-left: 20%;
+  }
+  .itemHolder {
+    margin-bottom: 20%;
+  }
+  .detailsBackground {
+  font-size: 1.8rem;
+}
+.head{
+  background-color: rgb(31, 29, 29);
+  width: 100vw;
+  height: 7rem;
+}
+.page-header{
+  color: white;
+  position: relative;
+  font-family: Lobster, cursive;
+  display: inline-block;
+  margin-left: 0%;
+  font-size: 5rem;
+}
+.fa-shopping-cart {
+  font-size: 4rem;
+  color: white;
+  position: relative;
+  display: inline-block;
+  left: 0%;
+  margin-left: 50%;
+}
+.logo {
+  width: 6rem;
+  display: inline-block;
+  position: relative;
+  transform: rotate(270deg);
+  margin-left: 5%;
+  vertical-align: top;
+}
+}
+@media only screen
+and (min-device-width : 1024px)
+and (orientation : portrait)  {
+  #arrowHolder {
+    top: 34%;
+    right: 37%;
+  }
+  #goatCounter {
+    top: 34%;
+    right: 37%;
+  }
+  #lionCounter {
+    top: 34%;
+    right: 37%;
+  }
+}
+@media only screen
+and (max-device-width : 812px)
+and (orientation : portrait)  {
+  #arrowHolder {
+    top: 31%;
+    right: 48%;
+  }
+  #goatCounter {
+    top: 31%;
+    right: 47%;
+  }
+  #lionCounter {
+    top: 31%;
+    right: 48%;
+  }
+}
+@media only screen
+and (max-device-width : 768px)
+and (orientation : portrait)  {
+  #arrowHolder {
+    top: 38%;
+    right: 28%;
+  }
+  #goatCounter {
+    top: 38%;
+    right: 28%;
+  }
+  #lionCounter {
+    top: 38%;
+    right: 28%;
+  }
+}
+@media only screen
+and (max-device-width : 740px)
+and (orientation : landscape)  {
+  #arrowHolder {
+    top: 90%;
+    right: 28%;
+  }
+  #goatCounter {
+    top: 90%;
+    right: 28%;
+  }
+  #lionCounter {
+    top: 90%;
+    right: 28%;
+  }
+}
+
+@media only screen
+and (max-device-width : 667px)
+and (orientation : landscape)  {
+  #arrowHolder {
+    top: 93%;
+    right: 19%;
+  }
+  #goatCounter {
+    top: 93%;
+    right: 19%;
+  }
+  #lionCounter {
+    top: 93%;
+    right: 19%;
+  }
+}
+
+@media only screen
+and (max-device-width : 640px)
+and (orientation : landscape)  {
+  #arrowHolder {
+    top: 93%;
+    right: 19%;
+  }
+  #goatCounter {
+    top: 93%;
+    right: 19%;
+  }
+  #lionCounter {
+    top: 93%;
+    right: 19%;
+  }
+}
+
+@media only screen
+and (max-device-width : 731px)
+and (orientation : portrait)  {
+  #arrowHolder {
+    top: 37%;
+    right: 48%;
+  }
+  #goatCounter {
+    top: 37%;
+    right: 48%;
+  }
+  #lionCounter {
+    top: 37%;
+    right: 48%;
+  }
+}
+
+@media only screen
+and (max-device-width : 420px)
+and (orientation : portrait)  {
+  #arrowHolder {
+    top: 37%;
+    right: 48%;
+  }
+  #goatCounter {
+    top: 37%;
+    right: 48%;
+  }
+  #lionCounter {
+    top: 37%;
+    right: 48%;
+  }
+}
+
+ @media only screen
 and (min-device-width : 360px)
 and (max-device-width : 640px)
 and (orientation : portrait) {
@@ -216,10 +779,25 @@ and (orientation : portrait) {
   vertical-align: top;
 }
 }
+@media only screen
+and (max-device-width : 375px)
+and (orientation : portrait)  {
+  #arrowHolder {
+    top: 31%;
+    right: 48%;
+  }
+  #goatCounter {
+    top: 31%;
+    right: 48%;
+  }
+  #lionCounter {
+    top: 31%;
+    right: 48%;
+  }
+}
 
 @media only screen
 and (min-device-width : 375px)
-and (max-device-width : 667px)
 and (orientation : portrait) {
   #lionCounter {
   top: 41%;
@@ -321,223 +899,21 @@ and (orientation : portrait) {
 }
 }
 
-@media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : landscape) {
-   .cartProductInfo, .cartTotal, .btn, .removeButton {
-    font-size: 2rem;
-  }
-  .cartTitle {
-    font-size: 4rem;
-  }
-  .mobileCardTitle {
-    display: block;
-    font-size: 3rem;
-    text-align: center;
-    font-family: Lobster, cursive;
-  }
-  .listBackground {
-    margin-left: 20%;
-  }
-  .itemHolder {
-    margin-bottom: 20%;
-  }
-  .detailsBackground {
-  font-size: 1.8rem;
-}
-.head{
-  background-color: rgb(31, 29, 29);
-  width: 100vw;
-  height: 7rem;
-}
-.page-header{
-  color: white;
-  position: relative;
-  font-family: Lobster, cursive;
-  display: inline-block;
-  margin-left: 0%;
-  font-size: 5rem;
-}
-.fa-shopping-cart {
-  font-size: 4rem;
-  color: white;
-  position: relative;
-  display: inline-block;
-  left: 0%;
-  margin-left: 50%;
-}
-.logo {
-  width: 6rem;
-  display: inline-block;
-  position: relative;
-  transform: rotate(270deg);
-  margin-left: 5%;
-  vertical-align: top;
-}
-}
+
 
 @media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
+and (max-device-width : 360px)
 and (orientation : portrait)  {
-   #arrowHolder {
-    top: 34%;
-    right: 37%;
-  }
-  .mobileCardTitle {
-    display: block;
-    font-size: 3rem;
-    text-align: center;
-    font-family: Lobster, cursive;
-  }
-  .listBackground {
-    margin-left: 20%;
-  }
-  .itemHolder {
-    margin-bottom: 20%;
-  }
-  .detailsBackground {
-  font-size: 1.8rem;
-}
-.head{
-  background-color: rgb(31, 29, 29);
-  width: 100vw;
-  height: 7rem;
-}
-.page-header{
-  color: white;
-  position: relative;
-  font-family: Lobster, cursive;
-  display: inline-block;
-  margin-left: 0%;
-  font-size: 5rem;
-}
-.fa-shopping-cart {
-  font-size: 4rem;
-  color: white;
-  position: relative;
-  display: inline-block;
-  left: 0%;
-  margin-left: 50%;
-}
-.logo {
-  width: 6rem;
-  display: inline-block;
-  position: relative;
-  transform: rotate(270deg);
-  margin-left: 5%;
-  vertical-align: top;
-}
-}
-
-
-
-@media only screen
-and (min-device-width : 1024px)
-and (max-device-width : 1366px)
-and (orientation : landscape)  {
   #arrowHolder {
-    top: 38%;
-    right: 46%;
+    top: 29%;
+    right: 28%;
   }
-  .mobileCardTitle {
-    display: block;
-    font-size: 3rem;
-    text-align: center;
-    font-family: Lobster, cursive;
+  #goatCounter {
+    top: 29%;
+    right: 28%;
   }
-  .listBackground {
-    margin-left: 0%;
-    position: relative;
-    margin-left: 0%;
-    margin-right: 0px;
+  #lionCounter {
+    top: 29%;
+    right: 28%;
   }
-  .itemHolder {
-    margin-bottom: 10%;
-    margin-left: 10% !important;
-    margin-right: 5% !important;
-  }
-  .head{
-  background-color: rgb(31, 29, 29);
-  width: 100vw;
-  height: 7rem;
-}
-.page-header{
-  color: white;
-  position: relative;
-  font-family: Lobster, cursive;
-  display: inline-block;
-  margin-left: 0%;
-  font-size: 5rem;
-}
-.fa-shopping-cart {
-  font-size: 4rem;
-  color: white;
-  position: relative;
-  display: inline-block;
-  left: 0%;
-  margin-left: 50%;
-}
-.logo {
-  width: 6rem;
-  display: inline-block;
-  position: relative;
-  transform: rotate(270deg);
-  margin-left: 5%;
-  vertical-align: top;
-}
-}
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape)  {
-    .mobileCardTitle {
-    display: block;
-    font-size: 3rem;
-    text-align: center;
-    font-family: Lobster, cursive;
-  }
-  .listBackground {
-    margin-left: 0%;
-    position: relative;
-    left: 0%;
-    margin-right: 0%;
-  }
-  .itemHolder {
-    margin-right: 3% !important;
-     margin-left: 5% !important;
-  }
-  .detailsBackground {
-  font-size: 1.8rem;
-}
-.head{
-  background-color: rgb(31, 29, 29);
-  width: 100vw;
-  height: 7rem;
-}
-.page-header{
-  color: white;
-  position: relative;
-  font-family: Lobster, cursive;
-  display: inline-block;
-  margin-left: 0%;
-  font-size: 5rem;
-}
-.fa-shopping-cart {
-  font-size: 4rem;
-  color: white;
-  position: relative;
-  display: inline-block;
-  left: 0%;
-  margin-left: 50%;
-}
-.logo {
-  width: 6rem;
-  display: inline-block;
-  position: relative;
-  transform: rotate(270deg);
-  margin-left: 5%;
-  vertical-align: top;
-}
 }
