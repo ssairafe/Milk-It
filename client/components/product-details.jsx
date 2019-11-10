@@ -69,11 +69,11 @@ class ProductDetails extends React.Component {
               <div className="row">
                 <div className="col-4">
                   <div id="arrowHolder" style={{ position: 'absolute', display: 'inline-block', marginLeft: '10%' }}>
-                    <div style={{ position: 'relative', display: 'inline-block' }}>
+                    <div style={{ position: 'absolute', display: 'inline-block', right: '10%' }}>
                       <h3 className="countButton" onClick={() => { this.getCountPlus(); }} style={{ position: 'relative', display: 'inline-block', transform: 'rotate(180deg)', top: '15px', cursor: 'pointer' }}>v</h3>
                       <h3 className="countButton" onClick={() => { this.getCountMinus(); }} style={{ position: 'relative', display: 'block', cursor: 'pointer' }}>v</h3>
                     </div>
-                    <div id="productCounter" style={{ position: 'relative', display: 'inline-block', left: '5%' }}>
+                    <div id="productCounter" style={{ position: 'absolute', display: 'inline-block' }}>
                       {this.state.product.counter}
                     </div>
                   </div>
