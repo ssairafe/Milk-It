@@ -143,8 +143,20 @@ margin-bottom: 10%;
   font-family: Lobster, cursive;
   cursor: pointer;
 }
+.confirmRemoveButton {
+  font-size: 5rem;
+  font-family: Lobster, cursive;
+  position: absolute;
+  text-align: center;
+ background: rgb(206, 204, 204, 0.8);
+  width: 100%;
+  height: 100%;
+  line-height: 350%;
+  display: none;
+}
 .cartProduct {
   margin-top: 2rem;
+  position: relative;
 }
 .backToCatalog{
   font-size: 2rem;

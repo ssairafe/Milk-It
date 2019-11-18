@@ -1,6 +1,8 @@
 import React from 'react';
 
 function CartSummaryItems(props) {
+  let itemToDelete = null;
+  let deleteButtons = document.getElementsByClassName('confirmRemoveButton');
   let grandTotal = 0;
   const renderingItems = props.items.map(item => {
     let sum = item.price * item.count;
@@ -16,8 +18,30 @@ function CartSummaryItems(props) {
           <div className="cartProductInfo m-2 row">{('$' + (item.price / 100).toFixed(2))}</div>
           <div className="cartProductInfo m-2 row">{item.shortDescription}</div>
           <div className="m-2 row removeButton" onClick={() => {
-            props.delete(item);
-          }}>Remove Item</div>
+            if (itemToDelete) {
+              for (let i = 0; i < deleteButtons.length; i++) {
+                deleteButtons[i].style.display = 'none';
+                itemToDelete = null;
+              }
+            } else {
+              itemToDelete = document.getElementById(item.id + '');
+              itemToDelete.style.display = 'block';
+            }
+          }}>Remove Item
+          </div>
+        </div>
+        <div id={item.id + ''} className="confirmRemoveButton">
+          <div className="confirmInner">
+            <span id="uSure">Are you sure?&nbsp;</span>
+            <span id="yes" style={{ cursor: 'pointer' }} onClick={() => {
+              props.delete(item);
+            }}>Yes</span>
+            /
+            <span id="no" style={{ cursor: 'pointer' }} onClick={() => {
+              itemToDelete.style.display = 'none';
+              itemToDelete = null;
+            }} >No</span>
+          </div>
         </div>
       </div>
     );

@@ -49,7 +49,7 @@ class CheckoutForm extends React.Component {
             <label style={{ width: '90%' }} htmlFor="">
               <div className="row">
           Shipping Address:
-                <textarea className="form-control" name="shippingAddress" value={this.state.shippingAddress} required autoFocus onChange={this.handleChange}/>
+                <textarea minLength="15" className="form-control" name="shippingAddress" value={this.state.shippingAddress} required autoFocus onChange={this.handleChange}/>
               </div>
             </label>
           </div>
